@@ -419,9 +419,10 @@
 		5DC3727E16E3AF6900190862 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DC3727D16E3AF6900190862 /* UIKit.framework */; };
 		5DC3728116E3AF8900190862 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DC3728016E3AF8800190862 /* CoreLocation.framework */; };
 		5DC3728316E3AF8E00190862 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DC3728216E3AF8E00190862 /* SystemConfiguration.framework */; };
-		905AF9D817BB41B1002FDE4E /* SocketShuttle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 905AF9D717BB41AD002FDE4E /* SocketShuttle.framework */; };
 		905AF9DA17BB41CC002FDE4E /* SocketShuttle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 905AF9D717BB41AD002FDE4E /* SocketShuttle.framework */; };
 		905AF9DB17BB41E3002FDE4E /* ANKStreamContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 335AC110176427C300AEFCFE /* ANKStreamContext.m */; };
+		DF0E544517C5B8180075BE44 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0E544417C5B8180075BE44 /* SocketRocket.framework */; };
+		DF0E544917C5B8DB0075BE44 /* SocketShuttle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0E544817C5B8DB0075BE44 /* SocketShuttle.framework */; };
 		F153F9AA1773C1DE0018BC16 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F153F9A91773C1DE0018BC16 /* Security.framework */; };
 /* End PBXBuildFile section */
 
@@ -447,13 +448,6 @@
 			remoteGlobalIDString = 4DE9EB64170D870A005B295E;
 			remoteInfo = SocketShuttle;
 		};
-		25D01E1217641047000D365D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 25D01E0517640FF1000D365D /* SocketShuttle.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 4DE9EB64170D870A005B295E;
-			remoteInfo = SocketShuttle;
-		};
 		330BDCA81765945F009BD559 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 25D01E0517640FF1000D365D /* SocketShuttle.xcodeproj */;
@@ -466,6 +460,13 @@
 			containerPortal = 25D01E0517640FF1000D365D /* SocketShuttle.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 905AF99F17BB3F40002FDE4E;
+			remoteInfo = SocketShuttleOSX;
+		};
+		DF0E544217C5B8070075BE44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25D01E0517640FF1000D365D /* SocketShuttle.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 905AF99E17BB3F40002FDE4E;
 			remoteInfo = SocketShuttleOSX;
 		};
 /* End PBXContainerItemProxy section */
@@ -685,6 +686,8 @@
 		5DC3727D16E3AF6900190862 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5DC3728016E3AF8800190862 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
 		5DC3728216E3AF8E00190862 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		DF0E544417C5B8180075BE44 /* SocketRocket.framework */ = {isa = PBXFileReference; lastKnownFileType = file; name = SocketRocket.framework; path = "External/SocketShuttle/Third-Party/SocketRocket/build/Release/SocketRocket.framework"; sourceTree = "<group>"; };
+		DF0E544817C5B8DB0075BE44 /* SocketShuttle.framework */ = {isa = PBXFileReference; lastKnownFileType = file; name = SocketShuttle.framework; path = External/SocketShuttle/build/Release/SocketShuttle.framework; sourceTree = "<group>"; };
 		F153F9A91773C1DE0018BC16 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -730,7 +733,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				905AF9D817BB41B1002FDE4E /* SocketShuttle.framework in Frameworks */,
+				DF0E544517C5B8180075BE44 /* SocketRocket.framework in Frameworks */,
+				DF0E544917C5B8DB0075BE44 /* SocketShuttle.framework in Frameworks */,
 				F153F9AA1773C1DE0018BC16 /* Security.framework in Frameworks */,
 				252A87D416F79A09001F3E8F /* CoreServices.framework in Frameworks */,
 				5DC3728316E3AF8E00190862 /* SystemConfiguration.framework in Frameworks */,
@@ -973,6 +977,8 @@
 		5DC370DB16E0805E00190862 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DF0E544817C5B8DB0075BE44 /* SocketShuttle.framework */,
+				DF0E544417C5B8180075BE44 /* SocketRocket.framework */,
 				5DC3727C16E3AF6100190862 /* iOS */,
 				5DC3727F16E3AF7A00190862 /* OS X */,
 				2592B7A116FCED64004573FF /* SenTestingKit.framework */,
@@ -1366,7 +1372,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				25D01E1317641047000D365D /* PBXTargetDependency */,
+				DF0E544317C5B8070075BE44 /* PBXTargetDependency */,
 			);
 			name = "ADNKit-OSX";
 			productName = "ADNKit-OSX";
@@ -1711,15 +1717,15 @@
 			name = SocketShuttle;
 			targetProxy = 25D01E0F17641021000D365D /* PBXContainerItemProxy */;
 		};
-		25D01E1317641047000D365D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SocketShuttle;
-			targetProxy = 25D01E1217641047000D365D /* PBXContainerItemProxy */;
-		};
 		330BDCA91765945F009BD559 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SocketShuttle;
 			targetProxy = 330BDCA81765945F009BD559 /* PBXContainerItemProxy */;
+		};
+		DF0E544317C5B8070075BE44 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SocketShuttleOSX;
+			targetProxy = DF0E544217C5B8070075BE44 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
